@@ -1,0 +1,16 @@
+<div class="">
+<p>This is from child html  using @input:{{msg}}</p>
+</div>
+
+<div class=""> <p>this is form child element using output with event emitter:
+<button (click)="useChild()" class="btn" [style.background-color]="color" >Click child!!!</button>
+</p>
+</div>
+<div class="">
+    <p>Template Reference variable</p>
+    <h2 #elemRefChild> this is reference Child</h2>
+    <button (click)="view(elemRefChild)">
+      View Element Reference Child
+    </button>
+    <p>{{elemRefChild.textContent}}</p>
+  </div>

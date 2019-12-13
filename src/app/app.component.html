@@ -1,0 +1,80 @@
+<div class="">
+  String interpolation :
+  {{ title }}
+</div>
+<br />
+<hr />
+<div class="">
+  Property binding:
+  <button
+    class="btn"
+    [disabled]="!allowServer"
+    [style.height.px]="height"
+    [style.background-color]="color"
+  >
+    Add Server
+  </button>
+</div>
+<br />
+<hr />
+<div class="">
+  Event Binding:
+  <button (click)="add()">Add</button>
+  {{ result }}
+</div>
+<div class="">
+  <button (click)="onClickStatus()">Status</button>
+  {{ status }}
+</div>
+<hr />
+<div class="">
+  Event binding to pass and display data:
+  <input type="text" class="form-control" (input)="onUpdate($event)" />
+  {{ statusName }}
+</div>
+<hr />
+<div class="">
+  Two way binding:
+  <div class="">
+    <input
+      type="number"
+      class="form-control"
+      placeholder="Number1"
+      [(ngModel)]="number1"
+    />
+    <br />
+    {{ number1 }}
+    <input
+      type="number"
+      class="form-control"
+      placeholder="Number2"
+      [(ngModel)]="number2"
+    />
+    <br />
+    {{ number2 }}
+    <br />
+    <button class="btn btn-success" (click)="addnum()">Add</button>
+    <br />
+    <button class="btn btn-success" (click)="subnum()">Sub</button>
+    {{ answer }}
+  </div>
+</div>
+<br />
+<hr />
+<div class="">
+  <p>@input communication between parent component and child component</p>
+  <p>@output communication between parent component and child component on click</p>
+  <p>{{ m1 }}</p>
+  <p>
+    <app-child [msg]="m2" (child)="displayChild($event)"></app-child>
+  </p>
+</div>
+<hr>
+<div class="">
+  <p>Template Reference variable</p>
+  <h2 #elemRef> this is reference</h2>
+  <button (click)="view(elemRef)">
+    View Element Reference
+  </button>
+  <p>{{elemRef.textContent}}</p>
+</div>
