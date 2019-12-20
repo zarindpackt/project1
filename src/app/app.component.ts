@@ -81,4 +81,19 @@ export class AppComponent implements OnInit, AfterViewInit{
    ngAfterViewInit(){
      console.log(this.firstViewChild.forViewChild());
    }
+
+   data:any[]=
+     [
+      {id: 0, name: "policy001"},
+      {id: 2, name: "policy002"},
+      {id: 3, name: "policy003"},
+      {id: 4, name: "policy004"},
+      {id: 5, name: "policy005"},
+     ];
+
+    ifDisplay : boolean = false;
+
+    show: boolean=true;
+
+
 }

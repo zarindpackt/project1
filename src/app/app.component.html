@@ -78,3 +78,41 @@
   </button>
   <p>{{elemRef.textContent}}</p>
 </div>
+<hr>
+<div class="">
+  <p>ngFor structural directive</p>
+ <table>
+   <tr *ngFor = "let f of data">
+     <td>{{f.id}}</td>
+     <td>{{f.name}}</td>
+   </tr>
+ </table>
+</div>
+<div class="">
+    <p>ngIF structural directive</p>
+    <p *ngIf="ifDisplay ;else ifNotDisplay">"If" structural directive</p>
+    <ng-template #ifNotDisplay>
+        <p>
+          Show thsi as "else statment"
+        </p>
+      </ng-template>
+  </div>
+
+<div class="">
+  <p>if,then else</p>
+  <ng-template
+  *ngIf="show;then showBlock; else notShowBlock">
+</ng-template>
+
+<ng-template #showBlock>
+  <p>
+    Show this only if "show" is true
+  </p>
+</ng-template>
+
+<ng-template #notShowBlock>
+  <p>
+    Show this only if "show" is not true
+  </p>
+</ng-template>
+</div>
